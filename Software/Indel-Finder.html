@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Indel-Finder | Cicagene</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Indel-FinderA program used to find indels from next-genearation sequencing data on target gene edited by CRISPR/Cas9 and then calculate the on-target efficiency. The indel information will be plotted">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Indel-Finder">
+<meta property="og:url" content="http://yoursite.com/Software/Indel-Finder.html">
+<meta property="og:site_name" content="Cicagene">
+<meta property="og:description" content="Indel-FinderA program used to find indels from next-genearation sequencing data on target gene edited by CRISPR/Cas9 and then calculate the on-target efficiency. The indel information will be plotted">
+<meta property="og:updated_time" content="2016-11-05T13:04:23.311Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Indel-Finder">
+<meta name="twitter:description" content="Indel-FinderA program used to find indels from next-genearation sequencing data on target gene edited by CRISPR/Cas9 and then calculate the on-target efficiency. The indel information will be plotted">
+  
+    <link rel="alternate" href="/atom.xml" title="Cicagene" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Cicagene</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Software/Indel-Finder.html" class="article-date">
+  <time datetime="2016-11-05T12:46:00.000Z" itemprop="datePublished">2016-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Indel-Finder
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Indel-Finder"><a href="#Indel-Finder" class="headerlink" title="Indel-Finder"></a>Indel-Finder</h1><p>A program used to find indels from next-genearation sequencing data on target gene edited by CRISPR/Cas9 and then calculate the on-target efficiency. The indel information will be plotted by matplotlib, a modul of python. </p>
+<p><a href="https://github.com/TuanjieNew/Indel-Finder" target="_blank" rel="external">Indel-Finder at github</a>.</p>
+<h2 id="Environment-configuration"><a href="#Environment-configuration" class="headerlink" title="Environment configuration:"></a>Environment configuration:</h2><p><code>Indel-Finder</code> uses <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;PAGE_TYPE=BlastDocs&amp;DOC_TYPE=Download" target="_blank" rel="external">Nucleotide-Nucleotide BLAST 2.4.0+</a> to find reads position and do local alignment and then processes the blast result to get indel and calculate the on-target efficiency.  </p>
+<h2 id="Depedency"><a href="#Depedency" class="headerlink" title="Depedency:"></a>Depedency:</h2><p><code>Indel-Finder</code> use numpy module and matplotlib module.<br>User can install them by using pip:</p>
+<blockquote>
+<p>pip install numpy<br>pip install matplotlib  </p>
+</blockquote>
+<h2 id="Get-Indel-Finder"><a href="#Get-Indel-Finder" class="headerlink" title="Get Indel-Finder:"></a>Get Indel-Finder:</h2><blockquote>
+<p>git clone <a href="https://github.com/TuanjieNew/Indel-Finder.git" target="_blank" rel="external">https://github.com/TuanjieNew/Indel-Finder.git</a>  </p>
+</blockquote>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h2><blockquote>
+<p>python indel_finder.py -r ./sample/crr5ref.fa -t ./sample/target1.fa -1 ./sample/1_S1_L001_R1_001.fastq -2 ./sample/1_S1_L001_R2_001.fastq -o ./    </p>
+</blockquote>
+<h2 id="Full-options"><a href="#Full-options" class="headerlink" title="Full options:"></a>Full options:</h2><h3 id="Common-options"><a href="#Common-options" class="headerlink" title="Common options"></a><em>Common options</em></h3><p> <code> -h &emsp;&emsp;show this helop message and exit.</code>  </p>
+<h3 id="File-options"><a href="#File-options" class="headerlink" title="File options"></a><em>File options</em></h3><p> <code> -r &emsp;&emsp;file name of reference file, required. The file is fasta format.</code><br> <code> -t &emsp;&emsp;file name of target sequence, required. The file is fasta format.</code><br> <code> -1 &emsp;&emsp;file name of read1, required. The file is fastq or fastq.gz format.</code><br> <code> -2 &emsp;&emsp;file name of read2, required. The file is fastq or fastq.gz format.</code><br> <code> -o &emsp;&emsp;outpout directories. Default is ./. blast results are in cas_temp, indel data in <em>_result, figures in </em>_figures.</code>  </p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p><code>Indel-Finder</code> is <a href="https://github.com/TuanjieNew/Indel-Finder/blob/master/LICENSE" target="_blank" rel="external">MIT-licensed</a>.  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/Software/Indel-Finder.html" data-id="civ58n30l0000ubss7tzag2sn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/11/05/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/05/Indel-Finder/">Indel-Finder</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/13/Exciting/">Exciting</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
